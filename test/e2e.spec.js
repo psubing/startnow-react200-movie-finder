@@ -29,6 +29,7 @@ describe('express', () => {
       .then((text) => {
         console.log(text)
         expect(text).to.include('Origin Movie Finder');
+        document()
       })
   );
 
