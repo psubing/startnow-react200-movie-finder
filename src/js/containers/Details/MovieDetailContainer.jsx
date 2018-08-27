@@ -1,5 +1,5 @@
 import React from 'react';
-import { getInfo } from '/Users/paulsubingsubing/oca/startnow-react200-movie-finder/src/js/containers/Search/searchAction.js';
+import { getInfo } from '../Search/searchAction';
 
 export default class MovieDetailContainer extends React.Component {
   constructor(props) {
