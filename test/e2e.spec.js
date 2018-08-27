@@ -27,7 +27,8 @@ describe('express', () => {
       .evaluate(() => document.querySelector('body').innerText)
       .end()
       .then((text) => {
-        expect(text).to.equal('Hello World');
+        console.log(text)
+        expect(text).to.include('Origin Movie Finder');
       })
   );
 
