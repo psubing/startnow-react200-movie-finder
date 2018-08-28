@@ -33,4 +33,4 @@ describe('express', () => {
 
   it('returns the correct status code', () => axios.get(url)
     .then(response => expect(response.status === 200)));
-});
+}).timeout(6500);
