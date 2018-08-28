@@ -21,12 +21,13 @@ describe('express', () => {
     nightmare = new Nightmare();
   });
 
-  it('should have the correct page title', () =>
+  it('should have the correct page title', (done) =>
     nightmare
       .goto(url)
       .evaluate(() => document.querySelector('body').innerText)
-      //.end()
+      .end(done())
       .then((text) => {
+        console.log('text: ' + text)
         expect(text).to.include('Movie Finder');
       })
   ).timeout(6500);
