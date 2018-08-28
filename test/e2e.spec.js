@@ -29,8 +29,8 @@ describe('express', () => {
       .then((text) => {
         expect(text).to.include('Movie Finder');
       })
-  );
+  ).timeout(6500);
 
   it('returns the correct status code', () => axios.get(url)
     .then(response => expect(response.status === 200)));
-}).timeout(6500);
+});
