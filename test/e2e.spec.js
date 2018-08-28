@@ -25,11 +25,9 @@ describe('express', () => {
     nightmare
       .goto(url)
       .evaluate(() => document.querySelector('body').innerText)
-      .end()
+      //.end()
       .then((text) => {
-        console.log(text)
         expect(text).to.include('Origin Movie Finder');
-        done()
       })
   );
 
